@@ -41,6 +41,8 @@ public class AccountAggregate {
     		throw new IllegalArgumentException("amount <= 0");
     	}
     	
+    	//TODO: check account balance, now allow negative balance
+    	
     	TradeProcessedEvent userAccountEvent = new TradeProcessedEvent(command.getId(), command.getFromCurrency(),
     			command.getToCurrency(), command.getFromAmount(), command.getToAmount(), command.getRate(),
     			command.getTimePlaced(), command.getOriginatingCountry());
@@ -51,7 +53,7 @@ public class AccountAggregate {
     protected void on(HouseTradeCommand command){
     	
     	HouseTradeProcessedEvent houseAccountEvent = new HouseTradeProcessedEvent(command.getUserId(), command.getFromCurrency(),
-    			command.getToCurrency(), command.getFromAmount(), command.getToAmount());
+    			command.getToCurrency(), command.getFromAmount(), command.getToAmount(), command.getOriginatingCountry());
         AggregateLifecycle.apply(houseAccountEvent);
     }
     

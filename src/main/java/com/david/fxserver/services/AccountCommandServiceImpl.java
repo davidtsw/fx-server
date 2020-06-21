@@ -43,7 +43,8 @@ public class AccountCommandServiceImpl implements AccountCommandService {
     	{
     		commandGateway.send(new CreateAccountCommand(Constants.HOUSE_ACC_ID));
     	}
-    	HouseTradeCommand command = new HouseTradeCommand(event.getId(), event.getFromCurrency(), event.getToCurrency(), event.getFromAmount(), event.getToAmount());
+    	HouseTradeCommand command = new HouseTradeCommand(event.getId(), event.getFromCurrency(), event.getToCurrency(),
+    			event.getFromAmount(), event.getToAmount(), event.getOriginatingCountry());
         commandGateway.send(command);
     }
 
