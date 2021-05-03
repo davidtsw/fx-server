@@ -48,7 +48,7 @@ I wish I had come across AXON earlier, so that I don't have to write my own even
 
 #### Swagger API doc
 Swagger is so good that it will automatically generate API documentation for you.
-Moreover, you can do your call your server directly using Swagger UI.
+Moreover, you can call your server directly using Swagger UI.
 
 # Demo
 The server is deployed to Heroku for showcase purpose.
