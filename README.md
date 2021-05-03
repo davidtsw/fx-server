@@ -56,7 +56,7 @@ If the server receives no web traffic in a 30-minute period, the VM will be forc
 When you wake up the server by touching it, the in-memory data will be lost.
 This also causes a short delay for this first request, but subsequent requests will perform normally.
 
-[Click here for API list](https://davidtsw-fxserver.herokuapp.com/swagger-ui.html)
+[Click here for API list](https://davidtsw-fxserver.herokuapp.com/swagger-ui/)
 
 # Room of improvement
 1. Unit testing
